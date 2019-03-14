@@ -1,0 +1,46 @@
+fileFormatVersion: 2
+guid: 9e2981b84e8345a4f9b90e90f95b8634
+ScriptedImporter:
+  fileIDToRecycleName:
+    2800000: Atlas_Space Station_1
+    11400000: _TilesetScriptObject
+    11400002: _superAsset
+    11400004: Tile_Space Station_1
+    11400006: Tile_Space Station_2
+    11400008: Tile_Space Station_3
+    11400010: Tile_Space Station_4
+    11400012: Tile_Space Station_5
+    11400014: Tile_Space Station_6
+    11400016: Tile_Space Station_7
+    11400018: Tile_Space Station_8
+    11400020: Tile_Space Station_9
+    11400022: Tile_Space Station_10
+    11400024: Tile_Space Station_11
+    11400026: Tile_Space Station_12
+    21300000: Sprite_Space Station_1
+    21300002: Sprite_Space Station_2
+    21300004: Sprite_Space Station_3
+    21300006: Sprite_Space Station_4
+    21300008: Sprite_Space Station_5
+    21300010: Sprite_Space Station_6
+    21300012: Sprite_Space Station_7
+    21300014: Sprite_Space Station_8
+    21300016: Sprite_Space Station_9
+    21300018: Sprite_Space Station_10
+    21300020: Sprite_Space Station_11
+    21300022: Sprite_Space Station_12
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
+  errors: []
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  pixelsPerUnit: 100
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 27
+  useSpriteAtlas: 1
+  atlasWidth: 2048
+  atlasHeight: 2048

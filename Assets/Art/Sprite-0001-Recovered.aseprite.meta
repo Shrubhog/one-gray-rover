@@ -1,0 +1,49 @@
+fileFormatVersion: 2
+guid: b1831e1af95e254819e5c6100cff3e7a
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: _main/Sprite-0001-Recovered
+    400000: _main/Sprite-0001-Recovered/Transform
+    2800000: tex2d_0
+    2800002: tex2d_1
+    2800004: tex2d_2
+    2800006: tex2d_3
+    2800008: tex2d_4
+    2800010: tex2d_5
+    2800012: tex2d_6
+    2800014: tex2d_7
+    2800016: tex2d_8
+    2800018: tex2d_9
+    2800020: tex2d_10
+    2800022: tex2d_11
+    7400000: anim_Idle
+    7400002: anim_Move
+    7400004: anim_Untagged
+    9500000: _main/Sprite-0001-Recovered/Animator
+    21200000: _main/Sprite-0001-Recovered/SpriteRenderer
+    21300000: sprite_0
+    21300002: sprite_1
+    21300004: sprite_2
+    21300006: sprite_3
+    21300008: sprite_4
+    21300010: sprite_5
+    21300012: sprite_6
+    21300014: sprite_7
+    21300016: sprite_8
+    21300018: sprite_9
+    21300020: sprite_10
+    21300022: sprite_11
+    100100000: _main
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b1577cdc41d01fa4dbf68ad51122a765, type: 3}
+  pixelsPerUnit: 100
+  spriteAtlas: {instanceID: 0}
+  frameRate: 60
+  sortingLayerName: 
+  sortingOrder: 0
+  animatorCullingMode: 0
+  animatorController: {fileID: 9100000, guid: 0b96f577d8961ed0e862cad970110d07, type: 2}
+  errors: []
