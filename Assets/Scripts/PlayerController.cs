@@ -30,26 +30,25 @@ public class PlayerController : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (Physics2D.IsTouchingLayers(PlayerCollider, Objective)) {
-            Debug.Log("GOOOOAL!");
+            // Debug.Log("GOOOOAL!");
             SceneManager.LoadScene("Win");
         }
         roverRigidbody.velocity = new Vector2(roverRigidbody.velocity.x, roverRigidbody.velocity.y);
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) {
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) {
             jumpSelect = Random.Range(0, jumpSounds.Length);
             roverRigidbody.velocity = new Vector2(roverRigidbody.velocity.x, jumpForce);
             audioSource.PlayOneShot(jumpSounds[jumpSelect], 1F);
-
-        } else if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+        } else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) {
             roverRenderer.flipX = true;
             roverRigidbody.velocity = new Vector2(-moveSpeed, roverRigidbody.velocity.y);
-        } else if (Input.GetKeyDown(KeyCode.RightArrow)) {
+        } else if (Input.GetKeyDown(KeyCode.RightArrow || Input.GetKeyDown(KeyCode.D))) {
             roverRenderer.flipX = false;
             roverRigidbody.velocity = new Vector2(moveSpeed, roverRigidbody.velocity.y);
         }
         animator.SetFloat("vel_x", roverRigidbody.velocity.x);
         animator.SetFloat("vel_y", roverRigidbody.velocity.y);
         if(transform.position.y <= -7.8) {
-            Debug.Log("Oops!");
+            // Debug.Log("Oops!");
             transform.position = new Vector3(-3.185597f, 1.416982f, 0);
         }
     }
