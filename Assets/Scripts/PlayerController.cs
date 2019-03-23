@@ -16,8 +16,11 @@ public class PlayerController : MonoBehaviour {
     private Animator animator;
 
     public LayerMask Objective;
+    public LayerMask ground;
 
     public Collider2D PlayerCollider;
+
+    private int jumpCounter;
     // Start is called before the first frame update
     void Start() {
         roverRigidbody = GetComponent<Rigidbody2D>();
@@ -25,6 +28,7 @@ public class PlayerController : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         PlayerCollider = GetComponent<Collider2D>();
+        jumpCounter = 0;
     }
 
     // Update is called once per frame
@@ -32,16 +36,21 @@ public class PlayerController : MonoBehaviour {
         if (Physics2D.IsTouchingLayers(PlayerCollider, Objective)) {
             // Debug.Log("GOOOOAL!");
             SceneManager.LoadScene("Win");
+        } else if (Physics2D.IsTouchingLayers(PlayerCollider, ground)) {
+            jumpCounter = 0;
         }
         roverRigidbody.velocity = new Vector2(roverRigidbody.velocity.x, roverRigidbody.velocity.y);
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) {
-            jumpSelect = Random.Range(0, jumpSounds.Length);
-            roverRigidbody.velocity = new Vector2(roverRigidbody.velocity.x, jumpForce);
-            audioSource.PlayOneShot(jumpSounds[jumpSelect], 1F);
+            if(!(jumpCounter >= 4)) {
+                jumpSelect = Random.Range(0, jumpSounds.Length);
+                roverRigidbody.velocity = new Vector2(roverRigidbody.velocity.x, jumpForce);
+                audioSource.PlayOneShot(jumpSounds[jumpSelect], 1F);
+                jumpCounter += 1;
+            }
         } else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) {
             roverRenderer.flipX = true;
             roverRigidbody.velocity = new Vector2(-moveSpeed, roverRigidbody.velocity.y);
-        } else if (Input.GetKeyDown(KeyCode.RightArrow || Input.GetKeyDown(KeyCode.D))) {
+        } else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) {
             roverRenderer.flipX = false;
             roverRigidbody.velocity = new Vector2(moveSpeed, roverRigidbody.velocity.y);
         }
